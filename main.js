@@ -49,7 +49,7 @@ const checkUntilSolvable = (arrayOfItems) => {
     //Set a variable to store the sum. It's a check for order to ensure that the given order of elements can lead to a solution. At the end, if the sum is an even number the startGame function starts
     let sum = 0;
     for (i = 0; i <= arrayOfItems.length - 1; i++) {
-
+        
         if (arrayOfItems[i] === '' && (i <= 3)) {
             sum = 1;
             break;
@@ -87,7 +87,7 @@ const checkUntilSolvable = (arrayOfItems) => {
     }
 };
 
-//Sorting elements in random order. In this function ar is a new array of sorted elements and ne
+//Sort elements in random order
 const mixItems = (arrayWithButtons, arrayWithElems) => {
     for (let prop in arrayWithButtons) {
         arrayWithElems[prop] = arrayWithButtons[prop].textContent;
@@ -105,7 +105,7 @@ const startGame = (arrButtons, arrElems) => {
     }
 };
 
-//The main function. This is where the program execution starts
+//The main function. This is where the program execution starts off
 const init = () => {
     move.textContent = 0;
     removeToPlay.style.display = "none";
@@ -126,27 +126,27 @@ const init = () => {
     playTheGame(arrayWithButtons);
 }
 
-const setTextContentForMove = () => move.textContent = parseInt(move.textContent) + 1;;
+const setTextContentForMove = () => move.textContent = parseInt(move.textContent) + 1;
 
 const newFunc1 = () => {
-    arrayWithButtons[emptyBtn].textContent = arrayWithButtons[emptyBtn - 1].textContent
+    arrayWithButtons[emptyBtn].textContent = arrayWithButtons[emptyBtn - 1].textContent;
     arrayWithButtons[emptyBtn - 1].textContent = "";
 
     if (arrayWithButtons[emptyBtn - 1] != null) {
 
-        arrayWithButtons[emptyBtn - 1].removeEventListener("click", newFunc1, true)
+        arrayWithButtons[emptyBtn - 1].removeEventListener("click", newFunc1, true);
     }
     if (arrayWithButtons[emptyBtn + 1] != null) {
 
-        arrayWithButtons[emptyBtn + 1].removeEventListener("click", newFunc2, true)
+        arrayWithButtons[emptyBtn + 1].removeEventListener("click", newFunc2, true);
     }
     if (arrayWithButtons[emptyBtn - 4] != null) {
 
-        arrayWithButtons[emptyBtn - 4].removeEventListener("click", newFunc3, true)
+        arrayWithButtons[emptyBtn - 4].removeEventListener("click", newFunc3, true);
     }
     if (arrayWithButtons[emptyBtn + 4] != null) {
 
-        arrayWithButtons[emptyBtn + 4].removeEventListener("click", newFunc4, true)
+        arrayWithButtons[emptyBtn + 4].removeEventListener("click", newFunc4, true);
     }
 
     emptyBtn--;
@@ -154,20 +154,20 @@ const newFunc1 = () => {
 };
 
 const newFunc2 = () => {
-    arrayWithButtons[emptyBtn].textContent = arrayWithButtons[emptyBtn + 1].textContent
-    arrayWithButtons[emptyBtn + 1].textContent = ""
+    arrayWithButtons[emptyBtn].textContent = arrayWithButtons[emptyBtn + 1].textContent;
+    arrayWithButtons[emptyBtn + 1].textContent = "";
 
     if (arrayWithButtons[emptyBtn - 1] != null) {
-        arrayWithButtons[emptyBtn - 1].removeEventListener("click", newFunc1, true)
+        arrayWithButtons[emptyBtn - 1].removeEventListener("click", newFunc1, true);
     }
     if (arrayWithButtons[emptyBtn + 1] != null) {
-        arrayWithButtons[emptyBtn + 1].removeEventListener("click", newFunc2, true)
+        arrayWithButtons[emptyBtn + 1].removeEventListener("click", newFunc2, true);
     }
     if (arrayWithButtons[emptyBtn - 4] != null) {
-        arrayWithButtons[emptyBtn - 4].removeEventListener("click", newFunc3, true)
+        arrayWithButtons[emptyBtn - 4].removeEventListener("click", newFunc3, true);
     }
     if (arrayWithButtons[emptyBtn + 4] != null) {
-        arrayWithButtons[emptyBtn + 4].removeEventListener("click", newFunc4, true)
+        arrayWithButtons[emptyBtn + 4].removeEventListener("click", newFunc4, true);
     }
 
     emptyBtn++;
@@ -175,19 +175,19 @@ const newFunc2 = () => {
 };
 
 const newFunc3 = () => {
-    arrayWithButtons[emptyBtn].textContent = arrayWithButtons[emptyBtn - 4].textContent
-    arrayWithButtons[emptyBtn - 4].textContent = ""
+    arrayWithButtons[emptyBtn].textContent = arrayWithButtons[emptyBtn - 4].textContent;
+    arrayWithButtons[emptyBtn - 4].textContent = "";
     if (arrayWithButtons[emptyBtn - 1] != null) {
-        arrayWithButtons[emptyBtn - 1].removeEventListener("click", newFunc1, true)
+        arrayWithButtons[emptyBtn - 1].removeEventListener("click", newFunc1, true);
     }
     if (arrayWithButtons[emptyBtn + 1] != null) {
-        arrayWithButtons[emptyBtn + 1].removeEventListener("click", newFunc2, true)
+        arrayWithButtons[emptyBtn + 1].removeEventListener("click", newFunc2, true);
     }
     if (arrayWithButtons[emptyBtn - 4] != null) {
-        arrayWithButtons[emptyBtn - 4].removeEventListener("click", newFunc3, true)
+        arrayWithButtons[emptyBtn - 4].removeEventListener("click", newFunc3, true);
     }
     if (arrayWithButtons[emptyBtn + 4] != null) {
-        arrayWithButtons[emptyBtn + 4].removeEventListener("click", newFunc4, true)
+        arrayWithButtons[emptyBtn + 4].removeEventListener("click", newFunc4, true);
     }
 
     emptyBtn = emptyBtn - 4;
@@ -195,20 +195,20 @@ const newFunc3 = () => {
 };
 
 const newFunc4 = () => {
-    arrayWithButtons[emptyBtn].textContent = arrayWithButtons[emptyBtn + 4].textContent
-    arrayWithButtons[emptyBtn + 4].textContent = ""
+    arrayWithButtons[emptyBtn].textContent = arrayWithButtons[emptyBtn + 4].textContent;
+    arrayWithButtons[emptyBtn + 4].textContent = "";
 
     if (arrayWithButtons[emptyBtn - 1] != null) {
-        arrayWithButtons[emptyBtn - 1].removeEventListener("click", newFunc1, true)
+        arrayWithButtons[emptyBtn - 1].removeEventListener("click", newFunc1, true);
     }
     if (arrayWithButtons[emptyBtn + 1] != null) {
-        arrayWithButtons[emptyBtn + 1].removeEventListener("click", newFunc2, true)
+        arrayWithButtons[emptyBtn + 1].removeEventListener("click", newFunc2, true);
     }
     if (arrayWithButtons[emptyBtn - 4] != null) {
-        arrayWithButtons[emptyBtn - 4].removeEventListener("click", newFunc3, true)
+        arrayWithButtons[emptyBtn - 4].removeEventListener("click", newFunc3, true);
     }
     if (arrayWithButtons[emptyBtn + 4] != null) {
-        arrayWithButtons[emptyBtn + 4].removeEventListener("click", newFunc4, true)
+        arrayWithButtons[emptyBtn + 4].removeEventListener("click", newFunc4, true);
     }
 
     emptyBtn = emptyBtn + 4;
@@ -240,7 +240,6 @@ const playTheGame = (arrButtons) => {
 
         //This flag is for the timer to make it stop if and when the condition above is true
         flag = 1;
-
     } else {
         count = 0;
     }
